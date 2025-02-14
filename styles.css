@@ -57,7 +57,7 @@ body
 .slider-child
 {
     position: absolute;
-    animation: fadeIn 0.3s;
+    animation: fadeIn 0.5s;
     
 }
 
