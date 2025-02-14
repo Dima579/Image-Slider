@@ -1,0 +1,162 @@
+/*General Selectors*/
+
+*
+{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: aquamarine;
+}
+
+
+/*Introductory Writing*/
+.writing
+{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(20, 75, 57);
+}
+
+.writing h1
+{
+    font-size: 3em;
+}
+
+.writing p
+{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+
+/*General Styling*/
+
+.condenser
+{
+    margin: 0px 200px 0px 200px;
+}
+
+.slider-container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100vh;
+    scale: 90%;
+}
+
+
+/*Images*/
+
+.slider-child
+{
+    position: absolute;
+    animation: fadeIn 0.3s;
+    
+}
+
+@keyframes fadeIn 
+{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.slider-child-hidden
+{
+    
+    position: absolute;
+    display: none;
+}
+
+
+/*Buttons*/
+
+.np-buttons
+{
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    font-size: 50px;
+    color: #f7f9f9;
+    border: none;
+    background-color: rgb(17, 17, 17);
+    padding: 30px;
+    border-radius: 5px;
+    opacity: 25%;
+    transition: 0.3s;
+}
+
+.np-buttons button
+{
+    text-align: center;
+}
+
+#lPrev
+{
+    left: -1%;
+}
+
+#rNext
+{
+    right: -1%;
+}
+
+.np-buttons:hover
+{
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.np-buttons:active
+{
+    opacity: 75%;
+    cursor: pointer;
+}
+
+
+/*Dots*/
+
+.dots
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 10%;
+    
+}
+
+.dots li
+{
+    list-style: none;
+    margin: 0px 10px 0px 10px;
+}
+
+.dot
+{
+    z-index: 1;
+    height: 25px;
+    width: 25px;
+    background-color: none;
+    color:#f7f9f9;
+    border-radius: 50%;
+    display: inline-block;
+    border: solid 2px #f7f9f9;
+    background-color: none;
+    transition: 0.3s;
+}
+
+.dot:active , .dot:hover , .dot-activated
+{
+    background-color:#f7f9f9;
+    cursor: pointer;
+}

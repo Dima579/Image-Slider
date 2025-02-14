@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body>
+
+        <!--Introductory writing-->
+
+        <section class="writing">
+
+            <h1>Image Slider</h1>
+            <br>
+            <p>Thank you for viewing my slider! It was created by Alex Dimakopoulos and contains 3 images which can all be accessed either by using the next/previous buttons, or with the dots on the bottom middle.</p>
+            <br>
+            <p>If you wish to use the following code for any projects, please be sure to credit me.</p>
+
+        </section>
+
+        <!--The main container-->
+
+        <section class="slider-container condenser">
+
+                <!--Next and previous buttons-->
+            
+                <button class="s-prev np-buttons" id="lPrev" onclick="prevSlide()">&#10094</button>
+                <button class="s-next np-buttons" id="rNext" onclick="nextSlide()">&#10095</button>
+            
+                <!--Navigation dots-->
+
+                <ul class="dots">
+                    <li><span class="dot dot-activated" id="dot0" onclick="slideSelect(0)"></span></li>
+                    <li><span class="dot" id="dot1" onclick="slideSelect(1)"></span></li>
+                    <li><span class="dot" id="dot2" onclick="slideSelect(2)"></span></li>
+                </ul>
+
+            <!--Images-->
+           
+            <img class="slider-child" id="sImg0" src="images/slide 1.png">
+            <img class="slider-child-hidden" id="sImg1" src="images/slide 2.png">
+            <img class="slider-child-hidden" id="sImg2" src="images/slide 3.png">
+        </section>
+            
+        <script src="app.js"></script>
+    </body>
+</html>
