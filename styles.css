@@ -13,7 +13,7 @@ body
 }
 
 
-/*Introductory Writing*/
+/*Introductory Writing (No need for specific styling)*/
 .writing
 {
     text-align: center;
@@ -31,7 +31,7 @@ body
     font-size: 1.3em;
     font-weight: 600;
 }
-
+/*Introductory Writing (No need for specific styling)*/
 
 /*General Styling*/
 
@@ -40,25 +40,36 @@ body
     margin: 0px 200px 0px 200px;
 }
 
+/*RESPONSIVENESS FOR TABLETS*/
+@media (max-width: 768px) 
+{
+  .condenser
+  {
+    margin: auto;
+  }
+}
+/*RESPONSIVENESS FOR TABLETS*/
+
+/*SLIDER*/
 .slider-container
 {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: 100vh;
-    scale: 90%;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    max-width: 100%;
+
 }
 
-
-/*Images*/
-
-.slider-child
+.slider-child, .slider-child-hidden
 {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     position: absolute;
     animation: fadeIn 0.5s;
-    
 }
 
 @keyframes fadeIn 
@@ -67,62 +78,57 @@ body
     100% { opacity: 1; }
 }
 
-.slider-child-hidden
+.slider-child-hidden 
 {
-    
-    position: absolute;
     display: none;
 }
 
-
-/*Buttons*/
-
+/*NAVIGATIONAL BUTTONS*/
 .np-buttons
 {
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
+    z-index: 2;
     position: absolute;
-    font-size: 50px;
-    color: #f7f9f9;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    padding: clamp(10px, 2vw, 20px);
+
     border: none;
     background-color: rgb(17, 17, 17);
-    padding: 30px;
-    border-radius: 5px;
+    color: #f7f9f9;
     opacity: 25%;
+    
+    border-radius: 5px;
     transition: 0.3s;
+    cursor: pointer;
+    transition: 0.3s;
+    object-fit: contain;
 }
 
-.np-buttons button
-{
-    text-align: center;
-}
-
-#lPrev
-{
-    left: -1%;
-}
-
-#rNext
-{
-    right: -1%;
-}
-
-.np-buttons:hover
+.np-buttons:hover 
 {
     opacity: 50%;
-    cursor: pointer;
+
 }
 
 .np-buttons:active
 {
     opacity: 75%;
-    cursor: pointer;
 }
 
+#lPrev 
+{
+    left: 1%;
+}
 
-/*Dots*/
+#rNext 
+{
+    right: 1%;
+}
+/*NAVIGATIONAL BUTTONS*/
 
+/*NAVIGATIONAL DOTS*/
 .dots
 {
     position: absolute;
@@ -131,26 +137,28 @@ body
     z-index: 1;
     justify-content: space-evenly;
     align-items: center;
-    bottom: 10%;
-    
+    bottom: clamp(5%, 8vw, 11%);  
 }
 
 .dots li
 {
     list-style: none;
-    margin: 0px 10px 0px 10px;
+    margin: 0 clamp(5px, 2vw, 10px);
 }
 
 .dot
 {
     z-index: 1;
-    height: 25px;
-    width: 25px;
+    
+    height: clamp(10px, 2.5vw, 25px);
+    width: clamp(10px, 2.5vw, 25px);
+    border: solid 0.1em #f7f9f9;
+
     background-color: none;
     color:#f7f9f9;
     border-radius: 50%;
     display: inline-block;
-    border: solid 2px #f7f9f9;
+    
     background-color: none;
     transition: 0.3s;
 }
@@ -160,3 +168,26 @@ body
     background-color:#f7f9f9;
     cursor: pointer;
 }
+
+/*RESPONSIVNESS FOR PHONES*/
+@media (max-width: 480px) 
+{
+  .dot, .dot:active , .dot:hover , .dot-activated
+  {
+    opacity: 0.5;
+  }
+}
+/*RESPONSIVNESS FOR PHONES*/
+
+/*RESPONSIVENESS FOR TABLETS*/
+@media (max-width: 768px) 
+{
+  .dot, .dot:active , .dot:hover , .dot-activated
+  {
+    opacity: 0.25
+  }
+}
+/*RESPONSIVENESS FOR TABLETS*/
+/*NAVIGATIONAL DOTS*/
+
+/*SLIDER*/

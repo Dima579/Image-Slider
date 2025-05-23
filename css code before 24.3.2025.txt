@@ -1,0 +1,198 @@
+/*General Styling*/
+
+.condenser
+{
+    margin: 0px 200px 0px 200px;
+}
+
+.slider-container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+  
+    overflow: hidden;
+}
+
+@media (max-width: 480px) 
+{
+  .slider-container
+  {
+    scale: 25%;
+  }
+}
+
+@media (max-width: 768px) 
+{
+  .slider-container
+  {
+    scale: 45%;
+  }
+}
+
+/*Images*/
+
+.slider-child
+{
+    position: absolute;
+    animation: fadeIn 0.5s;
+    
+}
+
+@keyframes fadeIn 
+{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.slider-child-hidden
+{
+    
+    position: absolute;
+    display: none;
+}
+
+
+/*Buttons*/
+
+.np-buttons
+{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: absolute;
+    font-size: 50px;
+    color: #f7f9f9;
+    border: none;
+    background-color: rgb(17, 17, 17);
+    padding: 30px;
+    border-radius: 5px;
+    opacity: 25%;
+    transition: 0.3s;
+}
+
+#lPrev
+{
+    left: 1%;
+}
+
+#rNext
+{
+    right: 1%;
+}
+
+.np-buttons:hover
+{
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.np-buttons:active
+{
+    opacity: 75%;
+    cursor: pointer;
+}
+
+/*RESPONSIVNESS FOR PHONES*/
+@media (max-width: 480px) 
+{
+  .np-buttons
+  {
+    height: 88%;
+    width: 100%;
+  }
+
+  
+
+  .dots
+  {
+    scale: 2;
+    opacity: 0.5;
+  }
+}
+/*RESPONSIVNESS FOR PHONES*/
+
+/*RESPONSIVENESS FOR TABLETS*/
+@media (max-width: 768px) 
+{
+  #lPrev
+  {
+    scale: 1.5;
+  }
+
+  #rNext
+  {
+    scale: 1.5;
+  }
+
+  .dots
+  {
+    scale: 1.5;
+  }
+}
+/*RESPONSIVENESS FOR TABLETS*/
+
+/*Dots*/
+
+.dots
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 10%;
+    
+}
+
+.dots li
+{
+    list-style: none;
+    margin: 0px 10px 0px 10px;
+}
+
+.dot
+{
+    z-index: 1;
+    height: 25px;
+    width: 25px;
+    background-color: none;
+    color:#f7f9f9;
+    border-radius: 50%;
+    display: inline-block;
+    border: solid 2px #f7f9f9;
+    background-color: none;
+    transition: 0.3s;
+}
+
+.dot:active , .dot:hover , .dot-activated
+{
+    background-color:#f7f9f9;
+    cursor: pointer;
+}
+
+
+/*RESPONSIVNESS FOR PHONES*/
+@media (max-width: 480px) 
+{
+  .condenser
+  {
+    margin: 0;
+  }
+}
+/*RESPONSIVNESS FOR PHONES*/
+
+/*RESPONSIVENESS FOR TABLETS*/
+@media (max-width: 768px) 
+{
+  .condenser
+  {
+    margin: 0px;
+  }
+}
+/*RESPONSIVENESS FOR TABLETS*/
