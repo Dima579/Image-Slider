@@ -12,6 +12,6 @@ This project is awaiting one update which will implement responsiveness, from th
 
 If you wish to use the following code for any projects, please be sure to credit/reference me in your project.
 
-to see this project deployed, please follow the link below:
+to see this project deployed, please follow the link:
 https://image-slider-for-consultancy-project1.netlify.app/
 
